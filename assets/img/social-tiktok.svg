@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<rect width="1200" height="675" rx="28" fill="#111111"/>
+<path d="M574 120v240c0 76-54 130-131 130-60 0-108-38-126-92 20 14 45 22 71 22 67 0 111-44 111-112V120h75z" fill="#25f4ee"/>
+<path d="M602 95c16 47 47 76 98 86v73c-37-2-72-13-98-31v190c0 85-62 145-150 145-54 0-101-23-134-60 25 12 46 17 71 17 68 0 116-43 116-106V95h97z" fill="#fe2c55" opacity="0.88"/>
+<path d="M588 95c15 46 48 78 101 87v66c-37-1-72-12-101-29v183c0 83-59 141-143 141-31 0-60-8-84-23-27-17-47-43-58-72 18 12 39 19 62 19 63 0 106-43 106-104V95h117z" fill="white"/>
+<text x="760" y="175" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="700">TikTok</text>
+<text x="760" y="240" fill="#9ca3af" font-family="Arial, Helvetica, sans-serif" font-size="30">Videos cortos del destino</text>
+<rect x="760" y="320" width="115" height="220" rx="28" fill="#1f2937"/>
+<rect x="895" y="320" width="115" height="220" rx="28" fill="#1f2937"/>
+<rect x="1030" y="320" width="115" height="220" rx="28" fill="#1f2937"/>
+</svg>
