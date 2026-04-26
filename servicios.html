@@ -14,6 +14,20 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/styles.css" rel="stylesheet">
+  <script>
+    (() => {
+      const defaults = { theme: "light", contrast: false, fontScale: 100 };
+      try {
+        const saved = JSON.parse(localStorage.getItem("primeroChileAccessibility")) || {};
+        const settings = { ...defaults, ...saved };
+        document.documentElement.classList.toggle("pc-theme-dark", settings.theme === "dark");
+        document.documentElement.classList.toggle("pc-theme-contrast", Boolean(settings.contrast));
+        document.documentElement.style.fontSize = `${settings.fontScale || 100}%`;
+      } catch (error) {
+        document.documentElement.style.fontSize = "100%";
+      }
+    })();
+  </script>
 </head>
 
 <body class="page-bg-soft">
@@ -45,6 +59,24 @@
               <li class="nav-item"><a class="nav-link" href="emprendedores.html">Emprendedores</a></li>
               <li class="nav-item ms-lg-2 mt-3 mt-lg-0"><a class="btn-pc-outline nav-cta"
                   href="publicar-servicio.html"><i class="bi bi-megaphone"></i> Publicar servicio</a></li>
+              <li class="nav-item ms-lg-2 mt-3 mt-lg-0">
+                <div class="accessibility-toolbar" role="group" aria-label="Opciones de accesibilidad">
+                  <button class="accessibility-btn" type="button" data-accessibility-action="theme"
+                    aria-label="Cambiar tema claro u oscuro" aria-pressed="false" title="Cambiar tema claro u oscuro">
+                    <i class="bi bi-moon-stars"></i>
+                    <span>Tema</span>
+                  </button>
+                  <button class="accessibility-btn" type="button" data-accessibility-action="contrast"
+                    aria-label="Activar modo daltonismo o alto contraste" aria-pressed="false" title="Modo daltonismo / alto contraste">
+                    <i class="bi bi-palette"></i>
+                    <span>Daltonismo</span>
+                  </button>
+                  <button class="accessibility-btn accessibility-btn-square" type="button" data-accessibility-action="font-down"
+                    aria-label="Reducir tamaño de fuente" title="Reducir tamaño de fuente">A-</button>
+                  <button class="accessibility-btn accessibility-btn-square" type="button" data-accessibility-action="font-up"
+                    aria-label="Aumentar tamaño de fuente" title="Aumentar tamaño de fuente">A+</button>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
