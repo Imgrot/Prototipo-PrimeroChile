@@ -1,32 +1,26 @@
-# PRIMEROCHILE - PROTOTIPO HTML
+# PrimeroChile Vue
 
-## Qué incluye
-- index.html -> home más limpia
-- comunas.html -> vista separada para destinos/comunas
-- atractivos.html -> vista separada para experiencias y lugares
-- servicios.html -> vista separada para servicios turísticos
-- comunidad.html -> noticias + RRSS + galería comunitaria
-- emprendedores.html -> panel sugerido para emprendedores
-- publicar-servicio.html -> formulario ordenado con preview lateral
+Base Vue 3 migrada desde el prototipo HTML de PrimeroChile.
 
-## Archivos compartidos
-- assets/css/styles.css
-- assets/js/app.js
-- assets/img/*
+## Estructura aplicada
 
-## Idea principal
-- sacar la navegación por anclas del home actual
-- separar el contenido por intención
-- dejar el hero con más magia visual
-- usar sidebar dockeable en páginas internas, no en la home
-- preparar una base fácil de migrar a Vue 3 después
+- `src/layouts/MainLayout.vue`: layout principal con header, contenido y footer.
+- `src/components/layout`: componentes visuales comunes del layout.
+- `src/views`: vistas separadas por ruta.
+- `src/router`: rutas de la aplicación.
+- `src/composables`: lógica reusable para preferencias de accesibilidad e interacciones heredadas del prototipo.
+- `src/constants`: navegación y constantes de interfaz.
+- `src/helpers`: utilidades pequeñas.
+- `public/assets`: imágenes estáticas del prototipo.
 
-## Notas
-- Se usan CDNs de Bootstrap y Bootstrap Icons.
-- Las imágenes sociales son placeholders visuales.
-- El hero usa un recorte de las capturas que compartiste para conservar la onda del sitio actual.
+## Comandos
 
-## Siguiente paso sugerido
-- Convertir cada página a una vista de Vue 3
-- Mover cards a componentes reutilizables
-- Reemplazar placeholders por datos reales / API / backend
+```sh
+npm install
+npm run dev
+npm run build
+```
+
+## Nota de migración
+
+Esta versión conserva el contenido estático del prototipo HTML, pero lo deja montado sobre Vue Router, layout reutilizable, controles de accesibilidad persistentes en `localStorage` y un composable puente para las interacciones por `data-*`. La conexión con APIs puede hacerse después reemplazando los bloques estáticos por componentes y datos reales.
