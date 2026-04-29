@@ -141,7 +141,7 @@ button{border:0;background:none}
   background:
     linear-gradient(100deg, rgba(10,18,40,.82) 0%, rgba(10,18,40,.50) 42%, rgba(10,18,40,.16) 72%),
     linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.16)),
-    url('/assets/img/hero-araucania.jpg') center/cover no-repeat;
+    var(--hero-image, url('/assets/img/hero-araucania.jpg')) center/cover no-repeat;
   z-index:-2;
 }
 .hero-home::after{
